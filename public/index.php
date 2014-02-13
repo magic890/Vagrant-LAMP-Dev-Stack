@@ -1,6 +1,9 @@
 <?php
 // MySQL
-$mysqli = @new mysqli('localhost', 'root', 'root');
+$mysql_host = 'localhost';
+$mysql_user = 'root';
+$mysql_pwd = 'root'
+$mysqli = @new mysqli($mysql_host, $mysql_user, $mysql_pwd);
 
 $mysql_running = true;
 if (mysqli_connect_errno()) {
@@ -24,7 +27,7 @@ if ($m->addServer('localhost', 11211)) {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Vagrant LAMP stack</title>
+	<title>Vagrant LAMP Dev Stack</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" />
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
@@ -138,17 +141,17 @@ if ($m->addServer('localhost', 11211)) {
 			<table class="table table-striped">
 				<tr>
 					<td>Hostname</td>
-					<td>localhost</td>
+					<td><?php echo $mysql_host; ?></td>
 				</tr>
 
 				<tr>
 					<td>Username</td>
-					<td>root</td>
+					<td><?php echo $mysql_user; ?></td>
 				</tr>
 
 				<tr>
 					<td>Password</td>
-					<td>root</td>
+					<td><?php echo $mysql_pwd; ?></td>
 				</tr>
 
 				<tr>
@@ -162,7 +165,7 @@ if ($m->addServer('localhost', 11211)) {
 
 	<div id="footer">
 		<div class="container">
-			<p class="muted credit"><a href="https://github.com/MiniCodeMonkey/Vagrant-LAMP-Stack" target="_blank">Vagrant LAMP Stack</a> by <a href="https://github.com/MiniCodeMonkey" traget="_blank">Code Monkey</a>.</p>
+			<p class="muted credit"><a href="https://github.com/magic890/Vagrant-LAMP-Dev-Stack" target="_blank">Vagrant LAMP Dev Stack</a>.</p>
 		</div>
 	</div>
 </body>
