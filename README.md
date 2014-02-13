@@ -52,4 +52,4 @@ It must be placed in `public` folder.
 * Port: 11211
 
 
-
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/magic890/vagrant-lamp-dev-stack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
